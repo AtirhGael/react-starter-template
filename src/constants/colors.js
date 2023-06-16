@@ -1,7 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
 export default {
     dark: {
-        primary: '#0058ff',
+        primary: '#005EB8',
         secondary: '#ff8355',
         black: '#000'
     },

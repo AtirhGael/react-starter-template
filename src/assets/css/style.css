@@ -34,3 +34,15 @@
     flex-grow: 1;
     overflow: hidden;
 }
+
+.fw-bold{
+    font-weight: bold;
+}
+
+p{
+    font-family: sans-serif;
+    font-size: 18px;
+    letter-spacing: normal;
+    line-height: 32px;
+    color: #3b3c3d;
+}
