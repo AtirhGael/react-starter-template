@@ -15,8 +15,15 @@ height: '100%';
  
 }
 .solutions_arrow{
-   align-items: end;
-   padding-left: '10px';
-   font-weight: bold;
+   align-items: end ;
+   font-weight: bold; 
 
+}
+.solution_head{
+    font-size: x-large;
+    color: '' ;
+}
+.solution_text{
+    padding: '20px' !important;
+    font-size: '20px';
 }

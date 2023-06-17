@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { divnk } from 'react-router-dom'
 import frontendUrl from '../../urls/frontendUrl'
 import Title from '../../components/Title'
@@ -13,10 +13,11 @@ import Typography from '@mui/material/Typography';
 import { Extra } from '../../components/Extra'
 import {data,data2} from '../../components/Data/serviceMap'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import SouthEastIcon from '@mui/icons-material/SouthEast';
 import './styles.css'
 
 export default function Home() {
- 
+ const [isHovered, setIsHovered] = useState(false)
 
 
   return (
@@ -63,7 +64,9 @@ export default function Home() {
       />
       <CardContent>
         
-      <Title text={item.title} textAdivgn={'center'} size='h4' mb={2}  />
+      <Typography variant="h5" component="div">
+        {item.title}
+      </Typography>
    
           <div style={{display:'flex',flexDirection:'row'}}>
             {/* <div style={{height:'15px', width:'35px',backgroundColor:'black'}} ></div> */}
@@ -89,15 +92,47 @@ export default function Home() {
       
       
     </div>
-      <div style={{ display:'flex', flexDirection:'row',flexWrap:'wrap',justifyContent:'center' }}>
-        {data2.map((item)=>(
-          <Card sx={{ minWidth: 200, width:70,marginLeft:4,marginBottom:2 }} style={{border:'1px sodivd gray'}}>
-          <CardContent className='solutions_card'>
-            <div className='solutions_title' >{item}</div>
-            <div className='solutions_arrow'> hel </div>
+    <div style={{marginLeft:20}} >
+    <Typography
+  variant='h4'
+  sx={{
+    textAlign: 'start',
+    marginLeft: 0,
+    marginBottom: 2,
+    marginTop: 5,
+    color:'blue'
+  }}
+>
+Solutions We Cover
+</Typography>
+    <div className='solution_text' style={{fontSize:20,paddingTop:2,paddingBottom:10}}> With over 34 years in Information Technology, we have built up expertise in dozens of domains, including: </div>
+      
+      <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+      {data2.map((item,index) => (
+        <Card sx={{ minWidth: 200, width: 70, height:100, marginLeft: 4, 
+          marginBottom: 2 ,border: '1px solid gray',
+          transition: 'box-shadow 0.3s',
+          position: 'relative',
+        '&:hover': {
+          boxShadow: '0px 2px 2px 0px rgba(0.3,0,0,0.5)',
+          // boxShadow:'none'
+        },
+        
+        }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        >
+          <CardContent style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <Typography variant="h6" component="div">
+              {item}
+            </Typography>
+            <Typography key={index} variant="body2" color="text.secondary" sx={{ position: 'absolute', bottom: -2, right: 5 }}>
+              {!isHovered? <SouthEastIcon sx={{color:'blue'}}/> : <ArrowForwardIcon sx={{color:'blue'}}/>}
+            </Typography>
           </CardContent>
         </Card>
-        ))}
+      ))}
+    </div>
       </div>
     </>
   )

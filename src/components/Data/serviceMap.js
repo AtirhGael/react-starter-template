@@ -40,4 +40,6 @@ const data =[
 
 const data2 = [ 'Enterprice application', 'ERP', 'CRM', 'Operations management','corperate finance', 'payments','Asset management','Document management','intrats','fleet management','data analytics', 'web portals' ]
 
+
+
 export {data,data2}
