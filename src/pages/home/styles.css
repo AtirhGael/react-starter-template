@@ -1,0 +1,22 @@
+.card_solution{
+    height: '100px';
+    width: '100px';
+    border: '1px gray';
+}
+.solutions_card{
+
+background-color: bisque;
+height: '100%';
+
+}
+.solutions_title{
+    text-align: center;
+    font-weight: bold;
+ 
+}
+.solutions_arrow{
+   align-items: end;
+   padding-left: '10px';
+   font-weight: bold;
+
+}

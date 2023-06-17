@@ -1,18 +1,26 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { divnk } from 'react-router-dom'
 import frontendUrl from '../../urls/frontendUrl'
 import Title from '../../components/Title'
 import about from '../../assets/images/about.jpg'
 import { Box, Stack } from '@mui/material'
 import StatsItem from '../../components/StatsItem'
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import { Extra } from '../../components/Extra'
+import {data,data2} from '../../components/Data/serviceMap'
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import './styles.css'
 
 export default function Home() {
+ 
+
+
   return (
-<<<<<<< HEAD
-    <div>
-        Hello home gdeu page <Link to={frontendUrl.HOME.DASHBOARD}>go to DASHBOARD</Link>
-    </div>
-=======
+    <>
     <Box px={10}>
       <Title text={'About ScienceSoft – Global IT Company'} py={4} />
       <Box width={'70%'} mt={2}>
@@ -28,7 +36,7 @@ export default function Home() {
         </Box>
       </Box>
       <Box mt={10} mb={15}>
-        <Title text={'ScienceSoft in Numbers'} textAlign={'start'} size='h4' mb={5} />
+        <Title text={'ScienceSoft in Numbers'} textAdivgn={'start'} size='h4' mb={5} />
         <Stack direction="row" mb={4} spacing={{ xs: 1, sm: 2, md: 12 }}>
           <StatsItem number="34" title="years in IT" />
           <StatsItem number="750+" title="IT professionals" />
@@ -37,14 +45,60 @@ export default function Home() {
         </Stack>
       </Box>
       <Box width={'70%'} mt={1} mb={20}>
-        <Title text={'Our Geography'} textAlign={'start'} size='h4' mb={5} />
+        <Title text={'Our Geography'} textAdivgn={'start'} size='h4' mb={5} />
         <p>
             <span className='fw-bold'>Headquartered in the US and operating internationally</span>, 
             our team drives digital transformation for businesses globally. 
-            We ensure on-site presence to deliver services to our <span className='fw-bold'>major target markets</span> in:
+            We ensure on-site presence to dedivver services to our <span className='fw-bold'>major target markets</span> in:
           </p>
       </Box>
     </Box>
->>>>>>> a032d9c93847e8a519badac53fcebd26194bc267
+    <div className='fw-bold text-primary'> Our Service Map </div>
+    <div style={{ display:'flex', flexDirection:'row',flexWrap:'wrap',justifyContent:'center' }} >
+     
+      {data.map((item,index)=>( 
+    <Card sx={{ minWidth: 200, width:70,marginLeft:4,marginBottom:2 }} style={{border:'1px sodivd gray'}}>
+      <Extra
+      bgCollor={item.bgColor}
+      />
+      <CardContent>
+        
+      <Title text={item.title} textAdivgn={'center'} size='h4' mb={2}  />
+   
+          <div style={{display:'flex',flexDirection:'row'}}>
+            {/* <div style={{height:'15px', width:'35px',backgroundColor:'black'}} ></div> */}
+            <div style={{fontSize:'10px'}} >{item.text}</div>
+          </div>
+          <div style={{display:'flex',flexDirection:'row'}}>
+            {/* <div style={{height:'15px', width:'35px',backgroundColor:'black'}} ></div> */}
+            <div style={{fontSize:'10px'}} >{item.text1}</div>
+          </div>
+          <div style={{display:'flex',flexDirection:'row'}}>
+            {/* <div style={{height:'15px', width:'35px',backgroundColor:'black'}} ></div> */}
+            <div style={{fontSize:'10px'}} >{item.text2}</div>
+          </div>
+          <div style={{display:'flex',flexDirection:'row'}}>
+            {/* <div style={{height:'15px', width:'35px',backgroundColor:'black'}} ></div> */}
+            <div style={{fontSize:'10px'}} >{item.text3}</div>
+          </div>
+          
+     
+      </CardContent>
+    </Card>
+      ))  }
+      
+      
+    </div>
+      <div style={{ display:'flex', flexDirection:'row',flexWrap:'wrap',justifyContent:'center' }}>
+        {data2.map((item)=>(
+          <Card sx={{ minWidth: 200, width:70,marginLeft:4,marginBottom:2 }} style={{border:'1px sodivd gray'}}>
+          <CardContent className='solutions_card'>
+            <div className='solutions_title' >{item}</div>
+            <div className='solutions_arrow'> hel </div>
+          </CardContent>
+        </Card>
+        ))}
+      </div>
+    </>
   )
 }
