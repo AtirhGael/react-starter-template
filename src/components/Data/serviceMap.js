@@ -65,23 +65,45 @@ const data3 =[
 const serviceData = [
    {
     title:'BFSI',
-    image:'https://www.scnsoft.com/icons-tritone/with-space/bank.svg'
+    image:'https://www.scnsoft.com/icons-tritone/with-space/bank.svg',
+    image2:'https://www.scnsoft.com/blue-outline-icons/big_data.svg',
+    text:'Big Data'
    },
    {
     title:'HealthCare',
-    image:'https://www.scnsoft.com/icons-tritone/with-space/healthcare-1.svg'
+    image:'https://www.scnsoft.com/icons-tritone/with-space/healthcare-1.svg',
+    image2:'https://www.scnsoft.com/blue-outline-icons/ai.svg',
+    text:'Artificial Inteligence'
    },
    {
     title:'Manufacturing',
-    image:'https://www.scnsoft.com/icons-tritone/with-space/manufacturing.svg'
+    image:'https://www.scnsoft.com/icons-tritone/with-space/manufacturing.svg',
+    image2:'https://www.scnsoft.com/blue-outline-icons/data-science.svg',
+    text:' Data Science'
    },
    {
     title:'Rtails',
-    image:'https://www.scnsoft.com/icons-tritone/with-space/retail-red.svg'
+    image:'https://www.scnsoft.com/icons-tritone/with-space/retail-red.svg',
+    image2:'https://www.scnsoft.com/blue-outline-icons/data-science.svg',
+    text:'Internet Of Things'
    },
    {
     title:'Professional Services',
-    image:'https://www.scnsoft.com/icons-tritone/with-space/professional-services.svg'
+    image:'https://www.scnsoft.com/icons-tritone/with-space/professional-services.svg',
+    image2:'	https://www.scnsoft.com/blue-outline-icons/computer-vision.svg',
+    text:'Computer Vision'
+   },
+   {
+    title:'Professional Services',
+    image:'https://www.scnsoft.com/icons-tritone/with-space/professional-services.svg',
+    image2:'https://www.scnsoft.com/blue-outline-icons/blockchain.svg',
+    text:'BlockChain'
+   },
+   {
+    title:'Professional Services',
+    image:'https://www.scnsoft.com/icons-tritone/with-space/professional-services.svg',
+    image2:'https://www.scnsoft.com/blue-outline-icons/computer-vision.svg',
+    text:'Computer Vision'
    },
 ]
 const Backend =[

@@ -452,6 +452,29 @@ Our Capabilities and Technological Expertise
 <div className='carousel'>
   <Partnerships/>
 </div>
+
+{/* inovations*/}
+
+        <Typography
+            variant='h4'
+            sx={{
+              textAlign: 'start',
+              marginBottom: 1,
+              marginTop: 5,
+              color:'#000'
+
+                }}
+              >
+            We eagerly put in use IT innovations
+        </Typography>
+        <div className='box'>
+          {serviceData.map((item,index)=>(
+            <Industries
+            image={item.image2}
+            text={item.text}
+            />
+          )) }
+          </div>
     </Box>
   )
 }

@@ -51,9 +51,9 @@ height: '100%';
     align-items: center;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.1), 0 -1px 5px 0 rgba(0,0,0,.05);
     justify-content: center;
-    margin: 0 0px 0px 0;
+    margin: 0 0px 0 0;
     min-height: 120px;
-    padding: 5px 0;
+    padding: 0 0;
     /* text-align: center; */
     transition: all .5s ease;
    
@@ -69,6 +69,8 @@ height: '100%';
 }
 .editable_text{
    text-align: center;
+   /* padding-bottom: 5px; */
+   margin-bottom: 10px;
 }
 .item_aditable_image{
     align-content: center;
@@ -238,7 +240,7 @@ p{
     }
     .inner{
         flex-basis: 100%;
-        margin: 0 0 10px;
+        margin: 0 0 0;
     }
     .second{
        

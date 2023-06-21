@@ -8,6 +8,7 @@ import CardContent from '@mui/material/CardContent';
 import { Button, Stack } from '@mui/material'
 import StatsItem from '../../components/StatsItem'
 
+
 export function Extra({bgCollor}) {
   return (
     <div style={{ height:'7px',width:'100%',backgroundColor:bgCollor }}>
