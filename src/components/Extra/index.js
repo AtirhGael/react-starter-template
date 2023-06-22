@@ -64,33 +64,18 @@ export function Industries({image,text}){
   )
 }
 
+
+
+
 export function SOlutions({item}){
   const [isHovered, setIsHovered] = useState(false);
 
   return(
-    <Card sx={{ minWidth: 200,width:'50px',height:'100px',
-      marginBottom: 2 ,border: '1px solid #dadfe3',
-      transition: 'box-shadow 0.3s ease-in-out,border-color .3s ease-in-out',
-      position: 'relative',
-      flexBasis: 'calc(30% - 30px)',
-      // flexGrow:0,
-      // flexShrink:0,
-      // boxShadow:0,
-      display:'block',
-      left: 0,
-       right: 0,
-  
-    '&:hover': {
-      boxShadow: '0 2px 5px 0 rgba(0,0,0,.2)',
-      zIndex:0,
-      
-    },
-    
-    }}
+    <Card className='solutions'
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <CardContent style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <CardContent  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <Typography variant="h6" component="div" textAlign={'center'}>
           {item}
         </Typography>
@@ -102,32 +87,73 @@ export function SOlutions({item}){
   )
 }
 
-export function POpovers(){
+
+export function Policy({item}){
+  const [isHovered, setIsHovered] = useState(false);
+
+  return(
+    <Card
+  className='policy_iner'
+    style={{ minWidth: 200,height:'100px',
+      marginBottom: 2 ,border: '1px solid #dadfe3',
+      transition: 'box-shadow 0.3s ease-in-out,border-color .3s ease-in-out',
+      position: 'relative',
+      flexBasis: 'calc(30% - 30px)',
+     textAlign:'center',
+     justifyContent:'center',
+     alignItems:'center',
+      display:'flex',
+      flexDirection:'row',
+      left: 0,
+       right: 0,
+      // flexWrap:'wrap',
+    '&:hover': {
+      boxShadow: '0 2px 5px 0 rgba(0,0,0,.2)',
+      zIndex:0,
+      
+    },
+    
+    }} 
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <CardContent style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <Typography variant="h6" component="div" textAlign={'center'} className='policy_box'>
+          {item}
+        </Typography>
+        {/* <Typography  variant="body2" color="text.secondary" sx={{ position: 'absolute', bottom: -2, right: 5 }}>
+        {!isHovered? <SouthEastIcon sx={{color:'#005eb8'}}/> : <ArrowForwardIcon sx={{color:'#005eb8'}}/>}
+        </Typography> */}
+      </CardContent>
+    </Card>
+  )
+}
+
+export function POpovers({practice,year,projects,amount,workforce,number,text}){
   return(
     <Typography sx={{ p: 2 }} className='poping' >
         <div style={{display:'flex',
         justifyContent:'space-between',
-        alignItems:'stretch'
-      
+        alignItems:'stretch', 
       }}>
           <div style={{ flex:'1 1 auto' }}>
-             <p className='column_title'> practice </p>
-             <p className='column_value'> 70&</p>
+             <p className='column_title'> {practice} </p>
+             <p className='column_value'> {year}</p>
           </div>
           <div className='separator'> </div>
           <div style={{ flex:'1 1 auto' }}>
-          <p className='column_title'> practice </p>
-             <p className='column_value'> 70&</p>
+          <p className='column_title'> {projects} </p>
+             <p className='column_value'> {amount}</p>
           </div>
           <div className='separator'> </div>
           <div style={{ flex:'1 1 auto' }}>
-          <p className='column_title'> practice </p>
-             <p className='column_value'> 70&</p>
+          <p className='column_title'> {workforce} </p>
+             <p className='column_value'> {number}</p>
           </div>
          
         </div>
         <div className='popup_description'>
-         <p> hsjhdjhjshdjshdhjsdsdjhsjdhjkhjk</p>
+         <p> {text}</p>
         </div>
          <div className='popup_button'>
           Learn More
@@ -136,3 +162,4 @@ export function POpovers(){
     </Typography>
   )
 }
+

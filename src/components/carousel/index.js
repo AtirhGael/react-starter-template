@@ -74,24 +74,6 @@ const items = [
 ];
 
 
-const MyCarousel = () => {
-
-  return (
-    <Carousel>
-      {items.map((item, index) => (
-        <div key={index}>
-          <h2>{item.name}</h2>
-          <p>{item.description}</p>
-          <img src={item.image} alt={item.name} />
-        </div>
-      ))}
-    </Carousel>
-  );
-};
-
-
-
-
 export function Partnerships() {
 
   const settings = {
@@ -107,12 +89,12 @@ export function Partnerships() {
 
 
   return (
-    <div>
+    <div className='slider'>
       <Slider {...settings}>
         {items.map((img, ind) => {
           return (
-            <div key={ind}>
-              <img src={img.image} title='' alt='' width={100} height={100} />
+            <div key={ind} style={{gap:5,width:'100%'}}>
+              <img src={img.image} title='' alt='' width={150} height={150} />
             </div>
           )
         })}

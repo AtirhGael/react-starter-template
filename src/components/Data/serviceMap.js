@@ -35,10 +35,21 @@ const data =[
         text1:'Business application modernization driving the reduction of operational costs and profitability improvement.',
         text2:'Application support and maintenance.',
         bgColor:'#134eb2'
-    }
+    },
+    {
+        title:'Software development ',
+       
+          text:'Design, development, and support of enterprise software: web and mobile applications, cloud development, libraries and APIs.',
+          text3:' enterprise software: web and mobile applications, cloud development, libraries and APIs.',
+          text1:'SaaS product development. ',
+          text2:'SaaS  development. ',
+       
+        bgColor:'#3692f2'
+    },
 ]
 
 const data2 = [ 'Enterprice application', 'ERP', 'CRM', 'Operations management','corperate finance', 'payments','Asset management','Document management','intrats','fleet management','data analytics', 'web portals' ]
+const policy = [ 'Fixed Price', 'Time And Material', 'cosumption based pricing', 'monthly subscition fee' ]
 
 const data3 =[
     {
@@ -217,5 +228,161 @@ const Framework =[
     },
 ]
 
+const mobile =[
+    {
+        image:'	https://www.scnsoft.com/technologies-logos/mobile/ios-logo.svg  ',
+        practice:'Practice',
+        year:'10 years',
+        project:'Projects',
+        workforce:'workforce',
+        number:'60+',
+        text:'ScienceSoft’s achieves 20–50% cost reduction for iOS projects due to excellent self-management and Agile skills of the team. The quality is never compromised — our iOS apps are highly rated.'
+    },
+    {
+        image:'https://www.scnsoft.com/technologies-logos/mobile/android-logo.svg',
+        practice:'Practice',
+        year:'10 years',
+        project:'Projects',
+        pnumber:'60+',
+        workforce:'workforce',
+        number:'60+',
+        text:'There are award-winning Android apps in ScienceSoft’s portfolio. Among the most prominent projects is the 5-year-long development of Viber, a messaging and VoIP app for 1.8B users.'
+    },
+    {
+        image:'https://www.scnsoft.com/technologies-logos/mobile/xamarin-logo-vertical.svg',
+        practice:'Practice',
+        year:'6 years',
+        project:'Projects',
+        pnumber:'60+',
+        workforce:'workforce',
+        number:'80+',
+        text:"ScienceSoft cuts the cost of mobile projects twice by building functional and user-friendly cross-platform apps with Xamarin."
+    },
+    {
+        image:'https://www.scnsoft.com/technologies-logos/mobile/cordova-logo.svg',
+        practice:'Practice',
+        year:'6 years',     
+        workforce:'workforce',
+        number:'80+',
+        text:"ScienceSoft uses Cordova to create cross-platform apps and avoid high project costs that may come with native mobile development."
+    },
+    {
+        image:'https://www.scnsoft.com/technologies-logos/mobile/pwa-logo.svg ',
+        practice:'Practice',
+        year:'6 years',     
+        project:'Projects',
+        pnumber:'60+',
+        workforce:'workforce',
+        number:'80+',
+        text:"ScienceSoft takes the best from native mobile and web apps and creates the ultimate user experience in PWA."
+    },
+    {
+        image:'https://www.scnsoft.com/technologies-logos/mobile/react-native-logo.svg',
+        practice:'Practice',
+        year:'6 years',     
+        text:"ScienceSoft will save you from double or even triple expenses associated with platform-specific coding by creating cross-platform apps in Flutter."
+    },
+    {
+        image:'https://www.scnsoft.com/technologies-logos/mobile/flutter-logo.svg',
+        practice:'Practice',
+        year:'6 years',     
+        text:"With Ionic, ScienceSoft creates a single app codebase for web and mobile platforms and thus expands the audience of created apps to billions of users at the best cost."
+    },
+]
 
-export {data,data2,data3,serviceData,Backend,Frontend,Framework}
+const database =[
+    {
+        image:'	https://www.scnsoft.com/technologies-logos/databases/ms-sql.svg',
+        text:'Our Microsoft SQL Server-based projects include a BI solution for 200 healthcare centers, the world’s largest PLM software, and an automated underwriting system for the global commercial insurance carrier.',
+        image1:'https://www.scnsoft.com/technologies-logos/big-data/cassandra.svg',
+        text1:'Our Apache Cassandra consultants helped a leading Internet of Vehicles company enhance their big data solution that analyzes IoT data from 600,000 vehicles.'
+    },
+    {
+        image:'https://www.scnsoft.com/technologies-logos/databases/mysql.svg',
+     
+        image1:'https://www.scnsoft.com/technologies-logos/big-data/hive.svg',
+        text1:'ScienceSoft has helped one of the top market research companies migrate its big data solution for advertising channel analysis to Apache Hive. Together with other improvements, this led to 100x faster data processing.',
+        text:'We’ve implemented MySQL for Viber, an instant messenger with 1B+ users, and an award-winning remote patient monitoring software.'
+    },
+    {
+        image:'https://www.scnsoft.com/technologies-logos/databases/azure-sql-database-logo.svg',
+        image1:'https://www.scnsoft.com/technologies-logos/databases/apache-hbase-logo.svg',
+        text1:'We use HBase if your database should scale to billions of rows and millions of columns while maintaining constant write and read performance.',
+        text:"Azure SQL Database is great for handling large volumes of data and varying database traffic: it easily scales up and down without any downtime or disruption to the applications. It also offers automatic backups and point-in-time recoveries to protect databases from accidental corruption or deletion."
+    },
+    {
+        image1:'https://www.scnsoft.com/technologies-logos/big-data/apache-nifi-logo.svg',
+        text1:'With ScienceSoft’s managed IT support for Apache NiFi, an American biotechnology corporation got 10x faster big data processing, and its software stability increased from 50% to 99%.',
+        image:'https://www.scnsoft.com/technologies-logos/databases/oracle.svg   ',
+        text:"ScienceSoft's team has implemented Oracle for software products used by GSK and AstraZeneca. We’ve also delivered Oracle-based SCM platform for Auchan, a retail chain with 1,700 stores."
+    },
+    {
+        image:'https://www.scnsoft.com/technologies-logos/databases/mongodb-logo.svg',
+        image1:'https://www.scnsoft.com/technologies-logos/databases/mongodb-logo.svg',
+        text1:'ScienceSoft used MongoDB-based warehouse for an IoT solution that processed 30K+ events/per second from 1M devices. We’ve also delivered MongoDB-based operations management software for a pharma manufacturer.',
+        text:"ScienceSoft has used PostgreSQL in an IoT fleet management solution that supports 2,000+ customers with 26,500+ IoT devices. We’ve also helped a fintech startup promptly launch a top-flight BNPL product based on PostgreSQL"
+    },
+   
+]
+const Aws =[
+    {
+        image:'https://www.scnsoft.com/technologies-logos/big-data/amazon-s3.svg',
+      
+        text:'ScienceSoft leverages code reusability Angular is notable for to create large-scale apps. We chose Angular for a banking app with 3M+ users.'
+    },
+    {
+        image:'https://www.scnsoft.com/technologies-logos/big-data/amazon-s3.svg',
+        text:'ScienceSoft achieves 20–50% faster React development and 50–90% fewer front-end performance issues due to smart implementation of reusable components and strict adherence to coding best practices.'
+    },
+    {
+        image:'https://www.scnsoft.com/technologies-logos/big-data/amazon-dynamodb-logo.svg',
+        
+        text:"ScienceSoft achieves 20–50% faster React development and 50–90% fewer front-end performance issues due to smart implementation of reusable components and strict adherence to coding best practices."
+    },
+    {
+        image:'https://www.scnsoft.com/technologies-logos/cloud/amazon-documentdb.svg',
+        text:"By using a lightweight Vue framework, ScienceSoft creates high-performant apps with real-time rendering."
+    },
+    {
+        image:'https://www.scnsoft.com/technologies-logos/databases/amazon-rds-logo.svg',
+        
+        text:"By using a lightweight Vue framework, ScienceSoft creates high-performant apps with real-time rendering."
+    },
+    {
+        image:'https://www.scnsoft.com/technologies-logos/cloud/aws-elasticache.svg      ', 
+        text:"By using a lightweight Vue framework, ScienceSoft creates high-performant apps with real-time rendering. Read more on https://www.scnsoft.com/about/company"
+    },
+]
+const Azure =[
+    {
+        image:'https://www.scnsoft.com/technologies-logos/databases/azure-data-lake-logo.svg       ',
+      
+        text:'ScienceSoft leverages code reusability Angular is notable for to create large-scale apps. We chose Angular for a banking app with 3M+ users.'
+    },
+    {
+        image:'https://www.scnsoft.com/technologies-logos/big-data/azure-blob-storage.svg',
+        text:'ScienceSoft achieves 20–50% faster React development and 50–90% fewer front-end performance issues due to smart implementation of reusable components and strict adherence to coding best practices.'
+    },
+    {
+        image:'	https://www.scnsoft.com/technologies-logos/big-data/azure-cosmos-db-logo.svg',
+        
+        text:"ScienceSoft achieves 20–50% faster React development and 50–90% fewer front-end performance issues due to smart implementation of reusable components and strict adherence to coding best practices."
+    },
+    {
+        image:'https://www.scnsoft.com/technologies-logos/databases/azure-synapse-analytics-logo.svg    ',
+        text:"By using a lightweight Vue framework, ScienceSoft creates high-performant apps with real-time rendering."
+    },
+]
+const cloud =[
+    {
+        image:'https://www.scnsoft.com/technologies-logos/cloud/google-cloud-sql-1.svg   ',
+      
+        text:'ScienceSoft leverages code reusability Angular is notable for to create large-scale apps. We chose Angular for a banking app with 3M+ users.'
+    },
+    {
+        image:'https://www.scnsoft.com/technologies-logos/cloud/google-cloud-datastore-1.svg',
+        text:'ScienceSoft achieves 20–50% faster React development and 50–90% fewer front-end performance issues due to smart implementation of reusable components and strict adherence to coding best practices.'
+    },
+]
+
+export {cloud,Azure,Aws,data,data2,data3,serviceData,Backend,Frontend,Framework,policy,mobile,database}
