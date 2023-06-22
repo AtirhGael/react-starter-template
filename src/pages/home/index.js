@@ -138,7 +138,7 @@ export default function Home() {
               <Typography sx={{ display: 'flex', gap: '10px',paddingTop:2 }} >
 
 
-                <div style={{ fontSize: 13,
+                <div style={{ fontSize: 16,
                 boxSizing:'border-box',
                 Color:'#3b3c3d',
                 }}> Services to improve business performance, optimize customer service, and tap in digital transformation.</div>
@@ -153,7 +153,7 @@ export default function Home() {
             <Typography variant="h6" style={{fontWeight:'bold'}} >Software product companies</Typography>
          
               <Typography sx={{ display: 'flex', gap: '10px',paddingTop:2 }} >
-                <div style={{ fontSize: 12 }}> Services to help bring new products to the market and win customers fast.</div>
+                <div style={{ fontSize: 16 }}> Services to help bring new products to the market and win customers fast.</div>
               </Typography>
             </Box>
         </div>
