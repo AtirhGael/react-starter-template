@@ -73,58 +73,16 @@ export default function Home() {
             </p>
           </Box>
         </Box>
-          <Title text={'ScienceSoft in Numbers'} textAlign={'start'} mb={5} mt={6} />
-        {/* <Box mt={10} mb={15}>
+          <Title text={'ScienceSoft in Numbers'} size='h4' textAlign={'start'} mb={5} mt={6} />
+        <Box mt={10} mb={15}>
           <Stack direction="row" mb={4} spacing={{ xs: 1, sm: 2, md: 12 }} variant='div'>
             <StatsItem number="34" title="years in IT" />
             <StatsItem number="750+" title="IT professionals" />
             <StatsItem number="1600+" title="success stories" />
             <StatsItem number="30+" title="industry covers" />
           </Stack>
-        </Box> */}
-        <div style={{marginTop:10,marginBottom:10}}>
-        <div className="bx-viewport" aria-live="polite" style={{ width: '100%', overflow: 'hidden', position: 'relative', height: '71.7656px' }}>
-      <ul className="b-overview__list" data-slider="numbersText" style={{ width: '4215%', position: 'relative', transitionDuration: '0s', transform: 'translate3d(-369px, 0px, 0px)' }}>
-        <li className="b-overview__item visible four bx-clone" aria-hidden="false" style={{ float: 'left', listStyle: 'none', position: 'relative', width: '343px', marginRight: '16px' }}>
-          <div className="b-overview__item-amount">
-            <p className="b-overview__item-amount-title">30+</p>
-          </div>
-          <p className="b-overview__item-label">industries covered</p>
-        </li>
-        <li className="b-overview__item visible four" aria-hidden="false" style={{ float: 'left', listStyle: 'none', position: 'relative', width: '343px', marginRight: '16px' }}>
-          <div className="b-overview__item-amount">
-            <p className="b-overview__item-amount-title">34</p>
-          </div>
-          <p className="b-overview__item-label">years in IT</p>
-        </li>
-        <li className="b-overview__item visible four" aria-hidden="false" style={{ float: 'left', listStyle: 'none', position: 'relative', width: '343px', marginRight: '16px' }}>
-          <div className="b-overview__item-amount">
-            <p className="b-overview__item-amount-title">750+</p>
-          </div>
-          <p className="b-overview__item-label">IT professionals</p>
-        </li>
-        <li className="b-overview__item visible four" aria-hidden="true" style={{ float: 'left', listStyle: 'none', position: 'relative', width: '343px', marginRight: '16px' }}>
-          <div className="b-overview__item-amount">
-            <p className="b-overview__item-amount-title">3,600+</p>
-          </div>
-          <p className="b-overview__item-label">success stories</p>
-        </li>
-        <li className="b-overview__item visible four" aria-hidden="true" style={{ float: 'left', listStyle: 'none', position: 'relative', width: '343px', marginRight: '16px' }}>
-          <div className="b-overview__item-amount">
-            <p className="b-overview__item-amount-title">30+</p>
-          </div>
-          <p className="b-overview__item-label">industries covered</p>
-        </li>
-        <li className="b-overview__item visible four bx-clone" aria-hidden="false" style={{ float: 'left', listStyle: 'none', position: 'relative', width: '343px', marginRight: '16px' }}>
-          <div className="b-overview__item-amount">
-            <p className="b-overview__item-amount-title">34</p>
-          </div>
-          <p className="b-overview__item-label">years in IT</p>
-        </li>
-      </ul>
-      
-    </div>
-        </div>
+        </Box>
+  
         <Box className='boxes'>
             <Title text={'Our Geography'} textAlign={'start'} size='h4' mb={5} mt={12} />
 
