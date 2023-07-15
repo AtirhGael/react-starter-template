@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
-
-import UnAuthRoutes from './navigation/UnAuthRoutes';
-import AuthRoutes from './navigation/AuthRoutes';
 import store from './redux/setup/store';
-import Home from './pages/home';
+import About from './pages/About';
+import IZNavBar from './components/Header/IZNavBar'
+import Copyright from './components/Footer/Footer'
+import Home from './pages/Home';
+import Service from './pages/Services';
 
 function App() {
   const [isSigning] = useState(true);
@@ -13,7 +14,13 @@ function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
-        <Home/>
+      <IZNavBar/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/services/software-consulting' element={<Service/>}/>
+      </Routes>
+      <Copyright/>
       </BrowserRouter>
     </Provider>
   );

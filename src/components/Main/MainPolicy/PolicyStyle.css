@@ -1,0 +1,7 @@
+.title::after{
+    content: "";
+    height: 4px;
+    width: 50px;
+    background: skyblue;
+    display: block;
+}

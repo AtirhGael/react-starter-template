@@ -1,0 +1,22 @@
+@import './reset';
+@import './variable';
+@import './default';
+@import './contact';
+@import './modal';
+
+html, body{
+    scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+}
+body{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.section-container{
+    position: relative;
+    min-height: 100vh;
+    padding: 10% 5%;
+}

@@ -1,0 +1,18 @@
+hr.afterVideo {
+    border: 5px solid #00d8ff;
+    border-radius: 1px;
+}
+
+.video-responsive {
+  overflow: hidden;
+  padding: 56.25% 0 0 0;
+  position: relative;
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}

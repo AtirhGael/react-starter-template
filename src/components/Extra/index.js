@@ -7,6 +7,8 @@ import Typography from '@mui/material/Typography';
 import CardContent from '@mui/material/CardContent';
 import { Button, Stack } from '@mui/material'
 import StatsItem from '../../components/StatsItem'
+import './styles.css'
+import { process,partnership } from '../Data/HomeData';
 
 
 export function Extra({bgCollor}) {
@@ -45,7 +47,10 @@ export function Industries({image,text}){
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         >
-          <div className='icon' >    {!isHovered? <ArrowOutwardIcon sx={{color:'#005eb8'}}/> : <ArrowForwardIcon sx={{color:'#005eb8'}}/>} </div>
+          <div className='icon' >    
+          {!isHovered? <ArrowOutwardIcon fontSize='12px' sx={{color:'#005eb8'}}/> : <ArrowForwardIcon fontSize='12px' sx={{color:'#005eb8'}}/>}
+           </div>
+           
           <div className='second' > 
           <div className='item_aditable_image'>
             <img src={image}
@@ -80,7 +85,29 @@ export function SOlutions({item}){
           {item}
         </Typography>
         <Typography  variant="body2" color="text.secondary" sx={{ position: 'absolute', bottom: -2, right: 5 }}>
-        {!isHovered? <SouthEastIcon sx={{color:'#005eb8'}}/> : <ArrowForwardIcon sx={{color:'#005eb8'}}/>}
+        {!isHovered? <SouthEastIcon color='#005eb8' fontSize='12px'/> : <ArrowForwardIcon color='#005eb8' fontSize='12px'/>}
+        </Typography>
+      </CardContent>
+    </Card>
+  )
+}
+
+
+export function SOlutions2({item}){
+  const [isHovered, setIsHovered] = useState(false);
+
+  return(
+    <Card className='solutions2'
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <CardContent 
+      style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <Typography variant="h6" component="div" textAlign={'center'} className='solutions_text'>
+          {item}
+        </Typography>
+        <Typography  variant="body2" color="text.secondary" sx={{ position: 'absolute', bottom: -2, right: 5 }}>
+        {!isHovered? <SouthEastIcon color='#005eb8' fontSize='12px'/> : <ArrowForwardIcon color='#005eb8' fontSize='12px'/>}
         </Typography>
       </CardContent>
     </Card>
@@ -121,9 +148,6 @@ export function Policy({item}){
         <Typography variant="h6" component="div" textAlign={'center'} className='policy_box'>
           {item}
         </Typography>
-        {/* <Typography  variant="body2" color="text.secondary" sx={{ position: 'absolute', bottom: -2, right: 5 }}>
-        {!isHovered? <SouthEastIcon sx={{color:'#005eb8'}}/> : <ArrowForwardIcon sx={{color:'#005eb8'}}/>}
-        </Typography> */}
       </CardContent>
     </Card>
   )
@@ -136,7 +160,7 @@ export function POpovers({practice,year,projects,amount,workforce,number,text}){
         justifyContent:'space-between',
         alignItems:'stretch', 
       }}>
-          <div style={{ flex:'1 1 auto' }}>
+          <div style={{ flex:'1 1 auto',justifyContent:'start' }}>
              <p className='column_title'> {practice} </p>
              <p className='column_value'> {year}</p>
           </div>
@@ -163,3 +187,34 @@ export function POpovers({practice,year,projects,amount,workforce,number,text}){
   )
 }
 
+export function Processes(){
+  return(
+    <div className="swiper-slide p-3 " data-swiper-slide-index="6" style={{width: '100%',gap:10}}>
+    {process.map((items)=>(
+   <div class="card-box">
+    <div class="title-box d-flex align-items-center flex-column justify-content-center text-center">
+    <img class="img-fluid" src={items.image} alt="development"/>
+    <h3 class="h6 my-3 w-100"><b>{items.title}</b></h3>
+    <p class="desc m-0">{items.text}</p>
+    </div>
+</div>
+    ))}
+    </div>
+  )
+
+}
+
+export function Partnership(){
+  return(
+    <div className="swiper-slide p-3 " data-swiper-slide-index="6" style={{width: '100%', marginRight: '10px',gap:10}}>
+    {partnership.map((items)=>(
+   <div class="card-box">
+    <div class="title-box d-flex align-items-center flex-column justify-content-center text-center">
+    <img class="img-fluid" src={items.image} alt="development"/>
+    <h3 class="h6 my-3 w-100"><b>{items.title}</b></h3>
+    <p class="desc m-0">{items.text}</p>
+    </div>
+</div>
+    ))}
+    </div>
+  )}

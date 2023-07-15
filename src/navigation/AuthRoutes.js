@@ -1,7 +1,7 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom';
 import Dashboard from '../pages/dashboard';
-import Home from '../pages/home';
+import Home from '../pages/About';
 import frontendUrl from '../urls/frontendUrl';
 
 export default function AuthRoutes() {

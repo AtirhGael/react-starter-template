@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { divnk } from 'react-router-dom'
 import frontendUrl from '../../urls/frontendUrl'
 import Title from '../../components/Title'
+import { Box, Grid, Hidden, Stack } from '@mui/material'
 import about from '../../assets/images/about.jpg'
-import { Box, Stack } from '@mui/material'
 import StatsItem from '../../components/StatsItem'
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
@@ -29,7 +29,7 @@ const StyledTypography = styled(Typography)`
   margin-right: 8px;
 `;
 
-export default function Home() {
+export default function About() {
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -52,10 +52,6 @@ export default function Home() {
 
   return (
     <Box className='main_container'  >
-
-
-      <Box sx={{ justifyContent: 'center' }}>
-        
         <h1 className='page_title'> About ScienceSoft – Global IT Company</h1>
         <Box  className='boxes' >
           <Box>
@@ -73,18 +69,22 @@ export default function Home() {
             </p>
           </Box>
         </Box>
-          <Title text={'ScienceSoft in Numbers'} size='h4' textAlign={'start'} mb={5} mt={6} />
+        <h1 className='hp-title'>ScienceSoft in Numbers</h1>
+          {/* <Title text={'ScienceSoft in Numbers'} size='h4' textAlign={'start'} mb={5} mt={6} /> */}
         <Box mt={10} mb={15}>
           <Stack direction="row" mb={4} spacing={{ xs: 1, sm: 2, md: 12 }} variant='div'>
             <StatsItem number="34" title="years in IT" />
             <StatsItem number="750+" title="IT professionals" />
-            <StatsItem number="1600+" title="success stories" />
+           <Hidden smDown>
+           <StatsItem number="1600+" title="success stories" />
             <StatsItem number="30+" title="industry covers" />
+           </Hidden>
           </Stack>
         </Box>
   
         <Box className='boxes'>
-            <Title text={'Our Geography'} textAlign={'start'} size='h4' mb={5} mt={12} />
+        <h1 className='hp-title'>Our Geography</h1>
+            {/* <Title text={'Our Geography'} textAlign={'start'} size='h4' mb={5} mt={12} /> */}
 
           <p>
             <span className='fw-bold'>Headquartered in the US and operating internationally</span>,
@@ -92,8 +92,9 @@ export default function Home() {
             We ensure on-site presence to dedivver services to our <span className='fw-bold'>major target markets</span> in:
           </p>
         </Box>
+  
 
-        <div style={{ display: 'flex',flexDirection:'row', gap: 15 }}
+        <div 
         className='main_box_geography'
         >
           {data3.map((item, i) => (
@@ -118,16 +119,23 @@ export default function Home() {
 
           ))}
         </div>
-      </Box>
-
+    
+        <Hidden smUp>
+          <div className='good_idea'>.</div>
+        </Hidden>
       {/* whom we serve section */}
 
-      <div>
-        <Box width={'70%'} mt={1} mb={4} >
-  
-          <Title text={'Whom We Serve'} textAlign={'start'} size='h4' mb={5}  mt={8}/>
-
-        </Box>
+      <div className='middle'>
+          <Grid width={'70%'} mt={5} mb={4} xs={12} sm={6} md={4}>
+              <Hidden smUp >
+                <Box mt={30}>
+                 
+                </Box>
+              </Hidden>
+              
+          {/* <Title text={'Whom We Serve'} textAlign={'start'} size='h4' mb={5}  mt={8}/> */}
+          <h1 className='hp-title'>Whom We Serve</h1>
+        </Grid>
         <div style={{ display: 'flex',flexDirection:'row',gap: 10}} className='main_box_geography'>
           <Box className='box_serve'
           >
@@ -146,6 +154,7 @@ export default function Home() {
 
             
           </Box>
+         
           <Box
 
             className='box_serve'
@@ -160,7 +169,9 @@ export default function Home() {
       </div>
 
       {/* our customer section */}
-
+      <Hidden smUp>
+          <div className='good_idea'>.</div>
+        </Hidden>
       <div>
         <Box width={'100%'} mt={1} mb={4} >
           <Typography
@@ -175,20 +186,27 @@ export default function Home() {
           >
             Our Customers
           </Typography>
-          <p>
+          <p className='allow'>
             <span className='fw-bold'>Headquartered in the US and operating internationally</span>,
             our team drives digital transformation for businesses globally.
             We ensure on-site presence to dedivver services to our <span className='fw-bold'>major target markets</span> in:
           </p>
+          
+            <Hidden smDown>
 
           <div className='carousel'>
             <Partnerships />
           </div>
+            </Hidden>
 
         </Box>
 
       </div>
-      <Title text={'Our Service Map'} textAlign={'start'} size='h4' mb={5}  mt={6}/>
+      <Hidden smUp>
+          <div className='good_idea'>.</div>
+        </Hidden>
+        <h1 className='hp-title'>Our Service Map</h1>
+      {/* <Title text={'Our Service Map'} textAlign={'start'} size='h4' mb={5}  mt={6}/> */}
 
       <div
       className='box_service'
@@ -221,8 +239,8 @@ export default function Home() {
 
       {/* Industries ScienceSoft */}
       <div style={{width: '100%', marginTop:25}}>
-        
-          <Title text={'Industries ScienceSoft Serves'} textAlign={'start'} size='h4' mb={5} mt={10} />
+      <h1 className='hp-title'>Industries ScienceSoft Serves</h1>
+          {/* <Title text={'Industries ScienceSoft Serves'} textAlign={'start'} size='h4' mb={5} mt={10} /> */}
           <span className='bellow'>During our practice, we acquired expertise and a deep understanding of business models and processes across 30+ industries, including</span>
         
         <div className='box'>
@@ -239,10 +257,14 @@ export default function Home() {
       </div>
 
       <div style={{width:'100%'}} >
-        <Title text={'Solutions We Cover'} textAlign={'start'} size='h4' mb={5} mt={10} />
+      <h1 className='hp-title'>Solutions We Cover</h1>
+
+        {/* <Title text={'Solutions We Cover'} textAlign={'start'} size='h4' mb={5} mt={10} /> */}
         <div className='solution_text' style={{ fontSize: 20, paddingTop: 2, paddingBottom: 10 }}> With over 34 years in Information Technology, we have built up expertise in dozens of domains, including: </div>
 
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: 15,width:'100%' }}>
+        <div 
+        className='solutions_box'
+        >
           {data2.map((item, index) => (
             <SOlutions
               item={item}
@@ -256,7 +278,8 @@ export default function Home() {
       {/* our capability */}
 
       <div style={{}} >
-        <Title text={' Our Capabilities and Technological Expertise'} textAlign={'start'} size='h4' mb={5} mt={10} />
+      <h1 className='hp-title'>Our Capabilities and Technological Expertise</h1>
+        {/* <Title text={' Our Capabilities and Technological Expertise'} textAlign={'start'} size='h4' mb={5} mt={10} /> */}
         <div className='solution_text' style={{ fontSize: 20, paddingTop: 2, paddingBottom: 18
          }}> We have over 750 IT professionals on board, 22% of whom are senior-level, who are well-versed in the following technology domains: </div>
         <div className='capability_section'>
@@ -317,7 +340,7 @@ export default function Home() {
               </Box>
             ))}
 
-            <button className='toggle_btn' ></button>
+            {/* <button className='toggle_btn' ></button> */}
           </div>
 
          
@@ -459,7 +482,7 @@ export default function Home() {
               </Box>
             ))}
 
-            <button className='toggle_btn' ></button>
+            {/* <button className='toggle_btn' ></button> */}
           </div>
           {/* Mobile section ends here */}
 
@@ -632,7 +655,7 @@ export default function Home() {
               <div className='pic_section'> 
                 <div className='pic'> 
                 <img className='person_container_image' width="318" height="318" src="https://www.scnsoft.com/about/experts/expert-profiles/boris-shiklo.png
-" data-src="/about/experts/expert-profiles/boris-shiklo.png" alt=""                  data-ll-status="loaded"></img>
+                " data-src="/about/experts/expert-profiles/boris-shiklo.png" alt=""                  data-ll-status="loaded"></img>
                 </div>
                 <div className='text_pic'> 
                 <div className='author_name'> <p> Boris Chiclo</p> </div>
@@ -686,20 +709,52 @@ export default function Home() {
       </Box>
       <Box mt={10} className='service_card'>  
           <div className='service_logo'>
-          <p><img alt="Predictable performance and quality" className='service_logo_img' data-src="https://www.scnsoft.com/about/company-new/what-customers-get-01.svg" height="100" width="100" src="https://www.scnsoft.com/about/company-new/what-customers-get-01.svg" data-ll-status="loaded"/></p>
+          <p><img alt="Predictable performance and quality" className='service_logo_img' data-src="https://www.scnsoft.com/about/company-new/what-customers-get-01.svg" height="100" width="100" src="https://www.scnsoft.com/about/company-new/what-customers-get-02.svg" data-ll-status="loaded"/></p>
           </div>
           <div class="a-service-cards_content">
           <div>
           <h3 class="a-service-cards_content-header">
-          A quality-first company
+          Top-notch security
           </h3>
           <div class="a-service-cards_content-title">
-          <p>We provide only high-quality software and services to our clients. We guarantee you will get tangible business value from your IT investments, enjoy healthy project processes, professional and motivated teams, effective communication between ScienceSoft, your teams, and stakeholders.</p>
-          <p>To achieve this, ScienceSoft has developed a <a href="https://www.scnsoft.com/about/quality-management">comprehensive quality management system</a> that resides in quality-centered leadership, committed employees, transparent KPIs, data-driven decision-making, continuous process improvement, quality controls throughout the SDLC, and more.</p>
+          <p>34 years in IT services without security breaches, we guarantee full protection of our customers’ data. We heavily invest in a mature information security system compliant with ISO 27001 and sustainable security culture, retain top security experts on board and follow CIS, NIST, OWASP requirements and recommendations. Our approach builds on diligent IT assets management, secure environment, strict access control, strong encryption algorithms, continuous IT infrastructure monitoring, and the "security is everyone's responsibility" mindset. .</p>
           </div>
           </div>
           </div>
       </Box>
+      <Box mt={10} className='service_card'>  
+          <div className='service_logo'>
+          <p><img alt="Predictable performance and quality" className='service_logo_img' data-src="https://www.scnsoft.com/about/company-new/what-customers-get-01.svg" height="200" width="300" src="https://www.scnsoft.com/about/company-new/what-customers-get-01.svg" data-ll-status="loaded"/></p>
+          </div>
+          <div class="a-service-cards_content">
+          <div>
+          <h3 class="a-service-cards_content-header">
+          Fast development while retaining application stability 
+          </h3>
+          <div class="a-service-cards_content-title">
+          <p>We established a set of management and technology practices that allows us to release new application versions every 2-3 weeks and implement minor updates up to several times a day. We achieve that due to an iterative approach to development, resorting to Agile project management practices, and relying on cloud-native architectures and modern approaches to infrastructure management</p>
+          </div>
+          </div>
+          </div>
+      </Box>
+
+      <div>
+      <div class="page-share">
+            <p class="page-share-desc">Share:</p>
+            <a class="page-share-link">
+            <span class="sr-only">facebook</span>
+            <i class="icon-s-facebook"></i>
+            </a>
+            <a class="page-share-link">
+            <span class="sr-only">twitter</span>
+            <i class="icon-s-twitter"></i>
+            </a>
+            <a class="page-share-link" data-piwik-event="Share buttons,click,linkedin" rel="noopener noreferrer nofollow">
+            <span class="sr-only">linkedin</span>
+           
+            </a>
+            </div>
+      </div>
     </Box>
   )
 }

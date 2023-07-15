@@ -1,0 +1,42 @@
+h3.text-primary{
+    color: color(primary);
+    font-weight: font-weight(extra-bold) !important; 
+    font-size: 2.0em;
+}
+
+.btn{    
+    display: inline-block;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    padding: .7rem 1.3rem;
+    border-radius: 28px;
+    border:none;
+    font-weight: font-weight(bold);
+    border: 2px solid color(primary);
+    margin: 4px 0px;
+    outline: none;
+    &:hover{
+        border-color: color(secondary);
+    }
+}
+.btn + .btn{
+    margin-left: 3px;
+}
+.btn-full{
+    background: color(primary);
+    color: color(background-light);
+
+    &:hover{
+        background: color(secondary);
+    }
+}
+
+.btn-border{
+    color: color(primary);
+    background: transparent;
+
+    &:hover{
+        color: color(secondary);
+    }
+}
